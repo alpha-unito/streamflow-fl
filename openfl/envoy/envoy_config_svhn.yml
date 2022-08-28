@@ -1,0 +1,9 @@
+params:
+  cuda_devices: []
+
+optional_plugin_components: {}
+
+shard_descriptor:
+  template: svhn_shard_descriptor.SVHNShardDescriptor
+  params:
+    data_folder: svhn_data

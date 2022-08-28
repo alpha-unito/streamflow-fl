@@ -1,0 +1,42 @@
+aggregate_script:
+  type: File
+  path: scripts/aggregate.py
+  secondaryFiles:
+    - class: File
+      path: scripts/aggregation.py
+    - class: File
+      path: scripts/model.py
+epochs_per_round: 2
+init_script:
+  type: File
+  path: scripts/initialize_model.py
+  secondaryFiles:
+    - class: File
+      path: scripts/model.py
+mnist_dataset:
+  type: Directory
+  path: data/mnist
+rounds: 3
+svhn_dataset:
+  type: Directory
+  path: data/svhn
+train_mnist:
+  type: File
+  path: scripts/train-mnist.py
+  secondaryFiles:
+    - class: File
+      path: scripts/eval.py
+    - class: File
+      path: scripts/model.py
+    - class: File
+      path: scripts/training.py
+train_svhn:
+  type: File
+  path: scripts/train-svhn.py
+  secondaryFiles:
+    - class: File
+      path: scripts/eval.py
+    - class: File
+      path: scripts/model.py
+    - class: File
+      path: scripts/training.py

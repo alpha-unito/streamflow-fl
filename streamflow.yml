@@ -1,0 +1,70 @@
+#!/usr/bin/env streamflow
+version: v1.0
+workflows:
+  federated_learning:
+    type: cwl
+    config:
+      file: cwl/main.cwl
+      settings: cwl/config.yml
+    bindings:
+      - step: /loop/train_mnist
+        target:
+          deployment: marconi100
+#          deployment: worker2
+      - step: /loop/train_svhn
+        target:
+          deployment: epito
+#         deployment: worker1
+      - step: /eval_mnist
+        target:
+          deployment: marconi100
+#         deployment: worker2
+      - step: /eval_svhn
+        target:
+          deployment: epito
+#         deployment: worker1
+      - port: /mnist_dataset
+        target:
+          deployment: marconi100
+#         deployment: worker2
+          workdir: /m100_scratch/userexternal/gmittone
+      - port: /svhn_dataset
+        target:
+          deployment: epito
+#         deployment: worker1
+          workdir: /beegfs/home/icolonne/hybrid-federated-learning
+deployments:
+  epito:
+    type: slurm
+    config:
+      file: environments/epito-sbatch.sh
+      hostname: c3sfr1.di.unito.it
+      maxConcurrentSessions: 5
+      sshKey: /home/glassofwhiskey/.ssh/keys/occam_rsa
+      username: icolonne
+    workdir: /beegfs/home/icolonne/hybrid-federated-learning/streamflow
+  marconi100:
+    type: slurm
+    config:
+      file: environments/marconi100-sbatch.sh
+      hostname: login01-ext.m100.cineca.it
+      maxConcurrentSessions: 5
+      sshKey: /home/glassofwhiskey/.ssh/keys/marconi100_rsa
+      username: gmittone
+    workdir: /m100_scratch/userexternal/gmittone/streamflow
+  worker1:
+    type: ssh
+    config:
+      file: environments/hpc4ai.sh
+      nodes:
+        - worker-1
+      sshKey: /home/ubuntu/.ssh/id_rsa
+      username: ubuntu
+  worker2:
+    type: ssh
+    config:
+      file: environments/hpc4ai.sh
+      nodes:
+        - worker-2
+      sshKey: /home/ubuntu/.ssh/id_rsa
+      username: ubuntu
