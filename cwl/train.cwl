@@ -52,7 +52,7 @@ inputs:
       prefix: --model
   first_round:
     type: boolean
-    doc: Wether it is the first aggregation round or not
+    doc: Whether it is the first aggregation round or not
     inputBinding:
       position: 4
       prefix: --first_round
