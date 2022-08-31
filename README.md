@@ -15,7 +15,7 @@ Datasets have been placed onto two different HPC facilities:
 Since HPC worker nodes cannot access the Internet through outbound connections, this workload cannot be managed by FL frameworks that require direct bidirectional connections between worker and aggregator nodes. Conversely, StreamFlow relies on a pull-based data transfer mechanism that overcomes this limitation.
 
 To also perform a direct comparison between StreamFlow and the Intel [OpenFL](https://openfl.readthedocs.io/en/latest/index.html) framework, the pipeline has also been executed over two VMs (8 cores, 32GB
-RAM, 1 NVIDIA T4 GPU each) hosted on the [HPC4AI](https://hpc4ai.unito.it/) Cloud at the University of Torino, acting as workers. Covnersely, the aggregation plane has always been placed on Cloud.
+RAM, 1 NVIDIA T4 GPU each) hosted on the [HPC4AI](https://hpc4ai.unito.it/) Cloud at the University of Torino, acting as workers. Conversely, the aggregation plane has always been placed on Cloud.
 
 ## Usage
 
