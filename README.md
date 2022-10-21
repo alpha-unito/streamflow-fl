@@ -24,7 +24,7 @@ To run the experiment as is, clone [this](https://github.com/alpha-unito/streamf
 ```bash
 python -m venv venv
 source venv/bin/activate
-pip install "streamflow==0.2.0.dev1"
+pip install "streamflow==0.2.0.dev2"
 pip install -r requirements.txt
 streamflow run streamflow.yml
 ```
