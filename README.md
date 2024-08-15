@@ -17,6 +17,36 @@ Since HPC worker nodes cannot access the Internet through outbound connections, 
 To also perform a direct comparison between StreamFlow and the Intel [OpenFL](https://openfl.readthedocs.io/en/latest/index.html) framework, the pipeline has also been executed over two VMs (8 cores, 32GB
 RAM, 1 NVIDIA T4 GPU each) hosted on the [HPC4AI](https://hpc4ai.unito.it/) Cloud at the University of Torino, acting as workers. Conversely, the aggregation plane has always been placed on Cloud.
 
+If you want to cite this work, please use the reference below:
+
+```bibtex
+@inproceedings{22:ml4astro,
+  location  = {Catania, Italy},
+  author    = {Iacopo Colonnelli and
+               Bruno Casella and
+               Gianluca Mittone and
+               Yasir Arfat and
+               Barbara Cantalupo and
+               Roberto Esposito and
+               Alberto Riccardo Martinelli and
+               Doriana Medi\'{c} and
+               Marco Aldinucci},
+  booktitle = {Astrophysics and Space Science Proceedings},
+  doi       = {10.1007/978-3-031-34167-0_39},
+  editor    = {Filomena Bufano and
+               Simone Riggi and
+               Eva Sciacca and
+               Francesco Schillir\`{o}},
+  isbn      = {978-3-031-34167-0},
+  pages     = {193--199},
+  publisher = {Springer},
+  address   = {Cham, Switzerland},
+  title     = {Federated Learning meets {HPC} and cloud},
+  volume    = {60},
+  year      = {2023}
+}
+```
+
 ## Usage
 
 To run the experiment as is, clone [this](https://github.com/alpha-unito/streamflow-fl) repository on the aggregator node and use the following commands:

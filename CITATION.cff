@@ -1,0 +1,64 @@
+cff-version: 1.2.0
+message: "If you want to cite StreamFlow FL, please refer to the article below."
+authors:
+  - family-names: "Colonnelli"
+    given-names: "Iacopo"
+    orcid: "https://orcid.org/0000-0001-9290-2017"
+title: "Federated Learning meets HPC and cloud"
+version: 0.1
+url: "https://github.com/alpha-unito/xffl"
+preferred-citation:
+  type: conference-paper
+  authors:
+    - family-names: "Colonnelli"
+      given-names: "Iacopo"
+      orcid: "https://orcid.org/0000-0001-9290-2017"
+    - family-names: "Casella"
+      given-names: "Bruno"
+      orcid: "https://orcid.org/0000-0002-9513-6087"
+    - family-names: "Mittone"
+      given-names: "Gianluca"
+      orcid: "https://orcid.org/0000-0002-1887-6911"
+    - family-names: "Arfat"
+      given-names: "Yasir"
+      orcid: "https://orcid.org/0000-0002-6330-0399"
+    - family-names: "Cantalupo"
+      given-names: "Barbara"
+      orcid: "https://orcid.org/0000-0001-7575-3902"
+    - family-names: "Esposito"
+      given-names: "Roberto"
+      orcid: "https://orcid.org/0000-0003-4708-6860"
+    - family-names: "Martinelli"
+      given-names: "Alberto Riccardo"
+      orcid: "https://orcid.org/0000-0002-3707-7015"
+    - family-names: "Medić"
+      given-names: "Doriana"
+      orcid: "https://orcid.org/0000-0002-7163-5375"
+    - family-names: "Aldinucci"
+      given-names: "Marco"
+      orcid: "https://orcid.org/0000-0001-8788-0829"
+  doi: 10.1007/978-3-031-34167-0_39
+  collection-title: "Astrophysics and Space Science Proceedings"
+  editors:
+    - family-names: "Bufano"
+      given-names: "Filomena"
+      orcid: "https://orcid.org/0000-0002-3429-2481"
+    - family-names: "Riggi"
+      given-names: "Simone"
+      orcid: "https://orcid.org/0000-0001-6368-8330"
+    - family-names: "Sciacca"
+      given-names: "Eva"
+      orcid: "https://orcid.org/0000-0002-5574-2787"
+    - family-names: "Schillirò"
+      given-names: "Francesco"
+      orcid: "https://orcid.org/0000-0001-5106-2277"
+  isbn: 978-3-031-34167-0
+  publisher:
+    name: Springer
+    city: Cham
+    country: CH
+  start: 193
+  end: 199
+  title: "Federated Learning meets HPC and cloud"
+  volume: 60
+  year: 2023
